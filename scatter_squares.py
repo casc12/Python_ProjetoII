@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 x_values = list(range(1,1001))
 y_values = [x**2 for x in x_values]
 
-plt.scatter(x_values, y_values, c='red', edgecolor='none', s=40)
+plt.scatter(x_values, y_values, c=(0, 0, 0.8), edgecolor='none', s=40)
 
 # Define o título do gráfico e nomeia os eixos
 plt.title("Square Numbers", fontsize=14)
