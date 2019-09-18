@@ -6,10 +6,10 @@ from random_walk import RandomWalk
 # continua Criando novos passeios aleatórios 
 while True:
 	# Cria um passeio aleatório
-	rw = RandomWalk()
+	rw = RandomWalk(50000)
 	rw.fill_walk()
 	point_numbers = list(range(rw.num_points))
-	plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolor='none', s=15)
+	plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolor='none', s=1)
 	
 	#Enfatiza o primeiro e o último ponto
 	plt.scatter(0, 0, c='orange', edgecolor='none', s=100)
