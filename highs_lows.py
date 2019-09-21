@@ -8,7 +8,8 @@ with open(filename) as f:
 	#print(header_row)
 	highs = []
 	for row in reader:
-		highs.append(row[1])
+		high = int(row[1])
+		highs.append(high)
 		
 		
 		
