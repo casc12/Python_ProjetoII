@@ -18,17 +18,18 @@ print("Repositories returned:", len(repo_dicts))
 
 
 # Analisa o Primeiro repositório
-repo_dict = repo_dicts[0]
+#repo_dict = repo_dicts[0]
 
 
-print("\nSelected information about first repository:")
-print('Name: ', repo_dict['name'])
-print('Owner: ', repo_dict['owner']['login'])
-print('Stars: ',repo_dict['stargazers_count'])
-print('Repository: ',repo_dict['html_url'])
-print('Created: ', repo_dict['created_at'])
-print('Update: ',repo_dict['updated_at'])
-print('Discription: ', repo_dict['description'])
+print("\nSelected information about each repository:")
+for repo_dict in repo_dicts:
+	print('\nName: ', repo_dict['name'])
+	print('Owner: ', repo_dict['owner']['login'])
+	print('Stars: ',repo_dict['stargazers_count'])
+	print('Repository: ',repo_dict['html_url'])
+	print('Created: ', repo_dict['created_at'])
+	print('Update: ',repo_dict['updated_at'])
+	print('Discription: ', repo_dict['description'])
 """print("\nKeys:", len(repo_dict))
 
 for key in sorted(repo_dict.keys()):
