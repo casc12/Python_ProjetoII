@@ -10,4 +10,16 @@ print("Status code:", r.status_code)
 #Armazena a resposta da API em uma variável 
 response_dict = r.json()
 #processa o resultado
-print(response_dict.keys())
+print("Total repositories:", response_dict['total_count'])
+
+#Explora Informações sobre os repositórios
+repo_dicts = response_dict['items']
+print("Repositories returned:", len(repo_dicts))
+
+
+# Analisa o Primeiro repositório
+repo_dict = repo_dicts[0]
+print("\nKeys:", len(repo_dict))
+
+for key in sorted(repo_dict.keys()):
+	print(key)
