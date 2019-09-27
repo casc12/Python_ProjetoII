@@ -46,7 +46,8 @@ for repo_dict in repo_dicts:
 		description = "No description provided."
 	plot_dict = {
 	'value': repo_dict['stargazers_count'],
-	'label': description
+	'label': description,
+	'xlink': repo_dict['html_url'],
 	}
 	plot_dicts.append(plot_dict)
 # Cria a Visualização
